@@ -8,7 +8,6 @@ Project ini berisi form sebagai berikut:
 * Pegawai
 * Gaji Pegawai
 ## Fitur
----
 Fitur di form *Divisi, Jabatan, Pegawai, Gaji Pegawai.*
 | Name  | Status |
 | ----- | --- |
