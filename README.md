@@ -1,20 +1,22 @@
 # Sistem Pegawai
-Project ini dibuat untuk memenuhi tugas dari mata pelajaran **Pemrograman Berorientasi Objek.**
-Project ini berisi form sebagai berikut:
+This project was created to fulfill a school subject assignment which is **Object Oriented Programming.**
+<br>
+This project contains the following form:
 * Login
 * Menu
 * Divisi
 * Jabatan
 * Pegawai
 * Gaji Pegawai
-## Fitur
-Fitur di form *Divisi, Jabatan, Pegawai, Gaji Pegawai.*
+## Feature
+Feature in form *Divisi, Jabatan, Pegawai, Gaji Pegawai.*
 | Name  | Status |
 | ----- | --- |
-| Tambah | ✅ |
+| Create | ✅ |
 | Update | ✅ |
-| Hapus | ✅ |
+| Delete | ✅ |
 | Search| ✅ |
 
-Baca dokumentasi berikut untuk lebih memahami algoritma pada project ini.
-[Dokumentasi SIMPEG](https://dielzcode.gitbook.io/simpeg-pbo/)
+Full documentation
+<br>
+[SIMPEG Documentation](https://dielzcode.gitbook.io/simpeg-pbo/)
