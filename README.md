@@ -17,6 +17,6 @@ Feature in form *Divisi, Jabatan, Pegawai, Gaji Pegawai.*
 | Delete | ✅ |
 | Search| ✅ |
 
-Full documentation
+Full documentation about this project:
 <br>
 [SIMPEG Documentation](https://dielzcode.gitbook.io/simpeg-pbo/)
