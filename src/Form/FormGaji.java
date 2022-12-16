@@ -77,6 +77,7 @@ public class FormGaji extends javax.swing.JFrame {
         searchbtn = new javax.swing.JButton();
         searchidpeg = new javax.swing.JTextField();
         iddivisi8 = new javax.swing.JLabel();
+        clearbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -218,6 +219,13 @@ public class FormGaji extends javax.swing.JFrame {
 
         iddivisi8.setText("CARI ID PEGAWAI");
 
+        clearbtn.setText("CLEAR");
+        clearbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearbtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -247,11 +255,13 @@ public class FormGaji extends javax.swing.JFrame {
                                 .addComponent(iddivisi7)
                                 .addComponent(iddivisi8))
                             .addGap(127, 127, 127)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(searchidpeg, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(searchbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(searchbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(clearbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(nama)
@@ -271,7 +281,8 @@ public class FormGaji extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(searchidpeg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(searchbtn))
+                        .addComponent(searchbtn)
+                        .addComponent(clearbtn))
                     .addComponent(iddivisi8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -392,12 +403,13 @@ public class FormGaji extends javax.swing.JFrame {
     }//GEN-LAST:event_keluarActionPerformed
 
     private void gajitotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gajitotalActionPerformed
-        // TODO add your handling code here:
+
         hitungGajiTotal();
+        
     }//GEN-LAST:event_gajitotalActionPerformed
 
     private void combolpegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combolpegActionPerformed
-        // TODO add your handling code here:
+        
         if (combolpeg.getSelectedItem() != null){
             String idPegawai = combolpeg.getSelectedItem().toString();
             try{
@@ -418,7 +430,7 @@ public class FormGaji extends javax.swing.JFrame {
     }//GEN-LAST:event_combolpegActionPerformed
 
     private void combolpegloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combolpegloActionPerformed
-        // TODO add your handling code here:
+        
         gol_peg = combolpeglo.getSelectedItem().toString();
         if (gol_peg == "IIa"){
             gapok = 3200000;
@@ -465,7 +477,8 @@ public class FormGaji extends javax.swing.JFrame {
     }//GEN-LAST:event_combolpegloActionPerformed
 
     private void combolpeganakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combolpeganakActionPerformed
-       jmlh_anak = combolpeganak.getSelectedItem().toString();
+       
+        jmlh_anak = combolpeganak.getSelectedItem().toString();
         if (jmlh_anak == "1"){
             tunj_anak = 1200000;
         }    
@@ -498,6 +511,7 @@ public class FormGaji extends javax.swing.JFrame {
         }
         tunjanak.setText(String.valueOf(tunj_anak));
         hitungGajiTotal();
+        
     }//GEN-LAST:event_combolpeganakActionPerformed
 
     private void JTableGajiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTableGajiMouseClicked
@@ -506,8 +520,9 @@ public class FormGaji extends javax.swing.JFrame {
     }//GEN-LAST:event_JTableGajiMouseClicked
 
     private void tunjkshtnKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tunjkshtnKeyReleased
-        // TODO add your handling code here:
+      
          hitungGajiTotal();
+         
     }//GEN-LAST:event_tunjkshtnKeyReleased
 
     private void searchbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbtnActionPerformed
@@ -537,14 +552,13 @@ public class FormGaji extends javax.swing.JFrame {
     }//GEN-LAST:event_searchbtnActionPerformed
 
     private void searchidpegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchidpegActionPerformed
-        // TODO add your handling code here:
-        
+       
         searchbtn.doClick();
 
     }//GEN-LAST:event_searchidpegActionPerformed
 
     private void searchidpegKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchidpegKeyReleased
-        // TODO add your handling code here:
+        
         String key = searchidpeg.getText();
         System.out.println(key);
 
@@ -558,7 +572,14 @@ public class FormGaji extends javax.swing.JFrame {
 
     }//GEN-LAST:event_searchidpegKeyReleased
 
+    private void clearbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbtnActionPerformed
+
+        kosong();
+
+    }//GEN-LAST:event_clearbtnActionPerformed
+
     private void loadComboData(){
+        
         combolpeg.removeAllItems();
         try{
             Statement statement = con.createStatement();
@@ -645,6 +666,7 @@ public class FormGaji extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JTableGaji;
     private javax.swing.JButton btnhapus;
+    private javax.swing.JButton clearbtn;
     private javax.swing.JComboBox<String> combolpeg;
     private javax.swing.JComboBox<String> combolpeganak;
     private javax.swing.JComboBox<String> combolpeglo;
@@ -669,7 +691,9 @@ public class FormGaji extends javax.swing.JFrame {
     private javax.swing.JTextField tunjkshtn;
     private javax.swing.JButton updatebtn;
     // End of variables declaration//GEN-END:variables
-private void load_table() {
+
+    private void load_table() {
+        
         DefaultTableModel model = new DefaultTableModel();
         model.addColumn("ID PEGAWAI");
         model.addColumn("NAMA");
@@ -680,8 +704,6 @@ private void load_table() {
         model.addColumn("GAJI TOTAL");
         model.addColumn("GOLONGAN");
         
-        
-        //menampilkan data database ke dalam tabel
         try{
             String sql = "select *from gajipegawai";
             java.sql.Connection conn= config.configDB();
@@ -700,6 +722,7 @@ private void load_table() {
 
 private void searchData(String keyID){
         try{
+            
             Object [] listkolom = {"ID", "NAMA", "GAJI POKOK", "JUMLAH ANAK", "TUNJANGAN ANAK", "TUNJANGAN KESEHATAN", "GAJI TOTAL", "GOLONGAN"};
             DefaultTableModel dtm = new DefaultTableModel(null, listkolom);
              JTableGaji.setModel(dtm);
@@ -727,13 +750,15 @@ private void searchData(String keyID){
     }
 
     private void kosong() {
+        
+        searchidpeg.setText(null);
         combolpeg.getSelectedItem();
         nama.setText(null);
         gajipk.setText(null);
         combolpeganak.getSelectedItem();
         tunjanak.setText(null);
         tunjkshtn.setText(null);
-        
+        gajitotal.setText(null);
         
     }
 

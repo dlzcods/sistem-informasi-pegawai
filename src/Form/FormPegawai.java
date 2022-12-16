@@ -340,9 +340,10 @@ public class FormPegawai extends javax.swing.JFrame {
     }//GEN-LAST:event_btnhapusActionPerformed
 
     private void keluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarActionPerformed
-        // TODO add your handling code here:
+        
         new menu().setVisible(true);
         dispose();
+        
     }//GEN-LAST:event_keluarActionPerformed
 
     private void txtiddivisiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtiddivisiActionPerformed
@@ -373,7 +374,7 @@ public class FormPegawai extends javax.swing.JFrame {
     }//GEN-LAST:event_JTablePegawaiMouseClicked
 
     private void txtidpegawaiKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtidpegawaiKeyReleased
-        // TODO add your handling code here:
+        
          String key = txtidpegawai.getText();
         System.out.println(key);
         

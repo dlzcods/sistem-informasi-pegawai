@@ -220,7 +220,7 @@ public class FormDivisi extends javax.swing.JFrame {
         java.sql.Connection conn=(Connection)config.configDB();
         java.sql.PreparedStatement pst=conn.prepareStatement(sql);
         pst.execute();
-        JOptionPane.showMessageDialog(null, "data berhasil di edit");
+        JOptionPane.showMessageDialog(null, "data berhasil diedit");
         } catch (Exception e) {
         JOptionPane.showMessageDialog(null, "Perubahan Data Gagal"+e.getMessage());
         }
@@ -236,7 +236,7 @@ public class FormDivisi extends javax.swing.JFrame {
             java.sql.Connection conn=(Connection)config.configDB();
             java.sql.PreparedStatement pst=conn.prepareStatement(sql);
              pst.execute();
-            JOptionPane.showMessageDialog(this, "berhasil di hapus");
+            JOptionPane.showMessageDialog(this, "berhasil dihapus");
             } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
             }
@@ -383,7 +383,6 @@ public class FormDivisi extends javax.swing.JFrame {
         try{
             String sql = "select *from divisi";
             java.sql.Connection conn= config.configDB();
-            
             java.sql.Statement stm=conn.createStatement();
             java.sql.ResultSet res=stm.executeQuery(sql);
             while(res.next()){

@@ -33,7 +33,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnhapus" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="keluar" min="-2" max="-2" attributes="0"/>
+                      <Component id="keluarbtn" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -50,7 +50,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="searchbtn" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="keluar1" min="-2" max="-2" attributes="0"/>
+                              <Component id="clearbtn" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="txttunjanganjabatan" alignment="0" min="-2" pref="340" max="-2" attributes="0"/>
                           <Component id="txtperjdinas" alignment="0" min="-2" pref="340" max="-2" attributes="0"/>
@@ -70,7 +70,7 @@
                   <Component id="txtidjabatan" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="iddivisi" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="searchbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="keluar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="clearbtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -94,7 +94,7 @@
                   <Component id="btnhapus" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="updatebtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tambahbtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="keluar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="keluarbtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
           </Group>
@@ -147,12 +147,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnhapusActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="keluar">
+    <Component class="javax.swing.JButton" name="keluarbtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="KELUAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="keluarActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="keluarbtnActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -210,12 +210,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchbtnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="keluar1">
+    <Component class="javax.swing.JButton" name="clearbtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="CLEAR"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="keluar1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearbtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

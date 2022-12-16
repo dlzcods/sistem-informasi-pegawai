@@ -30,7 +30,7 @@ public class FormJabatan extends javax.swing.JFrame {
         tambahbtn = new javax.swing.JButton();
         updatebtn = new javax.swing.JButton();
         btnhapus = new javax.swing.JButton();
-        keluar = new javax.swing.JButton();
+        keluarbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTableJabatan = new javax.swing.JTable();
         iddivisi3 = new javax.swing.JLabel();
@@ -38,7 +38,7 @@ public class FormJabatan extends javax.swing.JFrame {
         txtperjdinas = new javax.swing.JTextField();
         iddivisi6 = new javax.swing.JLabel();
         searchbtn = new javax.swing.JButton();
-        keluar1 = new javax.swing.JButton();
+        clearbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,10 +84,10 @@ public class FormJabatan extends javax.swing.JFrame {
             }
         });
 
-        keluar.setText("KELUAR");
-        keluar.addActionListener(new java.awt.event.ActionListener() {
+        keluarbtn.setText("KELUAR");
+        keluarbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                keluarActionPerformed(evt);
+                keluarbtnActionPerformed(evt);
             }
         });
 
@@ -132,10 +132,10 @@ public class FormJabatan extends javax.swing.JFrame {
             }
         });
 
-        keluar1.setText("CLEAR");
-        keluar1.addActionListener(new java.awt.event.ActionListener() {
+        clearbtn.setText("CLEAR");
+        clearbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                keluar1ActionPerformed(evt);
+                clearbtnActionPerformed(evt);
             }
         });
 
@@ -153,7 +153,7 @@ public class FormJabatan extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnhapus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(keluar))
+                        .addComponent(keluarbtn))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(iddivisi1)
@@ -168,7 +168,7 @@ public class FormJabatan extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(searchbtn)
                                 .addGap(18, 18, 18)
-                                .addComponent(keluar1))
+                                .addComponent(clearbtn))
                             .addComponent(txttunjanganjabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtperjdinas, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jScrollPane1))
@@ -182,7 +182,7 @@ public class FormJabatan extends javax.swing.JFrame {
                     .addComponent(txtidjabatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(iddivisi)
                     .addComponent(searchbtn)
-                    .addComponent(keluar1))
+                    .addComponent(clearbtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtjabatan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -202,7 +202,7 @@ public class FormJabatan extends javax.swing.JFrame {
                     .addComponent(btnhapus)
                     .addComponent(updatebtn)
                     .addComponent(tambahbtn)
-                    .addComponent(keluar))
+                    .addComponent(keluarbtn))
                 .addGap(72, 72, 72))
         );
 
@@ -236,13 +236,13 @@ public class FormJabatan extends javax.swing.JFrame {
     }//GEN-LAST:event_tambahbtnActionPerformed
 
     private void updatebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatebtnActionPerformed
-        // TODO add your handling code here:
+        
         try {
             String sql ="UPDATE jabatan SET id_jabatan = '"+txtidjabatan.getText()+"', "+ "jabatan = '"+txtjabatan.getText()+"',  "+ "tunj_jabatan = '"+txttunjanganjabatan.getText()+"', "+ "perj_dinas = '"+txtperjdinas.getText()+"' WHERE id_jabatan = '"+txtidjabatan.getText()+"'";
             java.sql.Connection conn=(Connection)config.configDB();
             java.sql.PreparedStatement pst=conn.prepareStatement(sql);
             pst.execute();
-            JOptionPane.showMessageDialog(null, "data berhasil di edit");
+            JOptionPane.showMessageDialog(null, "data berhasil diedit");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Perubahan Data Gagal"+e.getMessage());
         }
@@ -252,25 +252,26 @@ public class FormJabatan extends javax.swing.JFrame {
     }//GEN-LAST:event_updatebtnActionPerformed
 
     private void btnhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhapusActionPerformed
-        // TODO add your handling code here:
+        
         try {
             String sql ="delete from jabatan where id_jabatan='"+txtidjabatan.getText()+"'";
             java.sql.Connection conn=(Connection)config.configDB();
             java.sql.PreparedStatement pst=conn.prepareStatement(sql);
              pst.execute();
-            JOptionPane.showMessageDialog(this, "berhasil di hapus");
+            JOptionPane.showMessageDialog(this, "berhasil dihapus");
             } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
             }
                 load_table();
                 kosong();
+                
     }//GEN-LAST:event_btnhapusActionPerformed
 
-    private void keluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarActionPerformed
+    private void keluarbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluarbtnActionPerformed
         // TODO add your handling code here:
         new menu().setVisible(true);
         dispose();
-    }//GEN-LAST:event_keluarActionPerformed
+    }//GEN-LAST:event_keluarbtnActionPerformed
 
     private void txttunjanganjabatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttunjanganjabatanActionPerformed
         // TODO add your handling code here:
@@ -316,10 +317,11 @@ public class FormJabatan extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtidjabatanKeyReleased
 
-    private void keluar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_keluar1ActionPerformed
-        // TODO add your handling code here:
+    private void clearbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearbtnActionPerformed
+        
         kosong();
-    }//GEN-LAST:event_keluar1ActionPerformed
+        
+    }//GEN-LAST:event_clearbtnActionPerformed
 
     private void JTableJabatanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTableJabatanMouseClicked
         // TODO add your handling code here:
@@ -372,13 +374,13 @@ public class FormJabatan extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JTableJabatan;
     private javax.swing.JButton btnhapus;
+    private javax.swing.JButton clearbtn;
     private javax.swing.JLabel iddivisi;
     private javax.swing.JLabel iddivisi1;
     private javax.swing.JLabel iddivisi3;
     private javax.swing.JLabel iddivisi6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton keluar;
-    private javax.swing.JButton keluar1;
+    private javax.swing.JButton keluarbtn;
     private javax.swing.JButton searchbtn;
     private javax.swing.JButton tambahbtn;
     private javax.swing.JTextField txtidjabatan;
@@ -395,7 +397,6 @@ public class FormJabatan extends javax.swing.JFrame {
         model.addColumn("TUNJANGAN JABATAN");
         model.addColumn("PERJALANAN DINAS");
         
-        //menampilkan data database ke dalam tabel
         try{
             String sql = "select *from jabatan";
             java.sql.Connection conn= config.configDB();
@@ -438,6 +439,7 @@ public class FormJabatan extends javax.swing.JFrame {
 
 
     private void kosong() {
+        
         txtidjabatan.setText(null);
         txtjabatan.setText(null);
         txttunjanganjabatan.setText(null);
