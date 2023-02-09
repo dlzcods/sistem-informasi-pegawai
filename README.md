@@ -2,7 +2,7 @@
 This project was created to fulfill a school subject assignment which is **Object Oriented Programming.**
 <br>
 
-
+There are 6 Form in this project:
 * Login
 * Menu
 * Divisi
@@ -17,10 +17,8 @@ Feature in form *Divisi, Jabatan, Pegawai, Gaji Pegawai.*
 | Update | ✅ |
 | Delete | ✅ |
 | Search| ✅ |
-
-Full documentation about this project:
 <br>
-[SIMPEG Documentation](https://dielzcode.gitbook.io/simpeg-pbo/)
+
 ## Screenshot
 ### Form Login
 ![Screenshot (363)](https://user-images.githubusercontent.com/73648392/208131127-b1ba3034-9b98-4770-a3d5-e1d0d42671af.png)
