@@ -1,7 +1,12 @@
 # Sistem Pegawai
+
+The Employee System(Sistem Pegawai) helps companies keep track of their employees. 
+<br>
+It has features for managing employee information and calculating their salaries. This makes it easier for companies to manage their workforce.
+<br>
+<br>
 This project was created to fulfill a school subject assignment which is **Object Oriented Programming.**
 <br>
-
 There are 6 Form in this project:
 * Login
 * Menu
