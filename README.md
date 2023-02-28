@@ -1,4 +1,4 @@
-# Sistem Pegawai
+# Sistem Pegawai(SIMPEG)
 
 The Employee System(Sistem Pegawai) helps companies keep track of their employees. 
 <br>
